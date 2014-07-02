@@ -6,10 +6,58 @@
         <link rel="stylesheet" href="../../style/index.css"  type="text/css" />
         <style>
 
-            .link-container {
+            .classroom-bg {
+                display: block;
+            }
+
+            .guides-bg {
+                display: none;
+            }
+
+            .inner-content {
                 position: absolute;
-                top: 515px;
-                left: 30px;
+                top: 505px;
+                left: 27px;
+            }
+
+            .tabs {
+                position: relative;
+                top: 0px;
+                left: 0px;
+            }
+
+            .classroom .tab:hover {
+                background-image: url('assets/computing_science_topic_guides_page/computing_science_topic_guides_page_classroom_tab_rollover.png');
+            }
+
+            .classroom .tab {
+                position: absolute;
+                display: none;
+                background-image: url('assets/computing_science_topic_guides_page/computing_science_topic_guides_page_classroom_tab_no_rollover.png');
+                width: 316px;
+                height: 56px;
+                top: 0px;
+            }
+
+            .guides .tab:hover {
+                background-image: url('assets/computing_science_topic_guides_page/computing_science_topic_page_guides_rollover.png');
+            }
+
+            .guides .tab {
+                position: absolute;
+                display: block;
+                background-image: url('assets/computing_science_topic_guides_page/computing_science_topic_page_guides_no_rollover.png');
+                width: 316px;
+                height: 56px;
+                top: 0px;
+                left: 328px;
+            }
+
+            .link-container {
+                display: none;
+                position: absolute;
+                top: 86px;
+                left: 0px;
             }
 
             .link {
@@ -20,21 +68,21 @@
                 position: absolute;
                 display: block;
                 /*border: 3px dashed #000;*/
-                width: 347px;
+                width: 630px;
                 height: 47px;
                 z-index: 2;
             }
 
             .link a:hover + .link-image {
-                background-image: url('assets/computing_science_ks1_page/how_does_a_robot_work_rollover.png');
+                background-image: url('assets/computing_science_topic_guides_page/computing_science_topic_guides_page_guide_tab_rollover.png');
             }
 
             .link-image {
                 position: absolute;
                 display: block;
-                background-image: url('assets/computing_science_ks1_page/how_does_a_robot_work_no_rollover.png');
-                width: 347px;
-                height: 47px;
+                background-image: url('assets/computing_science_topic_guides_page/computing_science_topic_guides_page_guide_tab_no_rollover.png');
+                width: 644px;
+                height: 135px;
                 top: 0px;
                 z-index: 1;
             }
@@ -57,14 +105,85 @@
     <body class="content">
 
         <section class="main-container">
-            <img src="assets/computing_science_ks1_page/computing_science_ks1_page.png"/>
-            <div class="link-container">
-                <div class="link">
-                    <a href="./ks1.html"></a>
-                    <span class="link-image"></span>
+            <img id="bg" src="assets/computing_science_topic_guides_page/computing_science_topic_page.png"/>
+            <div class="inner-content">
+                <div class="tabs">
+                    <div class="classroom">
+                        <div id="classroom-tab" class="tab"></div>
+                    </div>
+                    <div class="guides">
+                        <div id="guides-tab" class="tab"></div>
+                        <div id="link-container" class="link-container">
+                            <div class="link">
+                                <a href="./guides.html"></a>
+                                <span class="link-image"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
     </body>
+
+    <script>
+
+        window.onload = function() {
+            setup();
+        };
+
+        var bgClassroom = "assets/computing_science_topic_guides_page/computing_science_topic_page.png";
+        var bgGuides = "assets/computing_science_topic_guides_page/computing_science_topic_guides_page.png";
+
+        var classroomTab,
+            guidesTab,
+            linkContainer,
+            bg;
+
+        function setup() {
+            classroomTab = document.getElementById("classroom-tab");
+            guidesTab = document.getElementById("guides-tab");
+            linkContainer = document.getElementById("link-container");
+            bg = document.getElementById("bg");
+
+            // clicks
+            classroomTab.onclick = classroomTabClick;
+            guidesTab.onclick = guidesTabClick;
+        }
+
+        function classroomTabClick() {
+            switchToClassroom();
+        }
+
+        function guidesTabClick() {
+            switchToGuides();
+        }
+
+        function switchToClassroom() {
+            // bg
+            bg.src = bgClassroom;
+            bg.style["zIndex"] = -1;
+            // link
+            linkContainer.style["display"] = "none";
+            // classroom
+            classroomTab.style["display"] = "none";
+        }
+
+        function switchToGuides() {
+            // bg
+            bg.src = bgGuides;
+            bg.style["zIndex"] = -1;
+            // link
+            linkContainer.style["display"] = "block";
+            // classroom
+            classroomTab.style["display"] = "block";
+        }
+
+    </script>
+
 </html>
+
+
+
+
+

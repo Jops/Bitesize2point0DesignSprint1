@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Design prototype sprint 1 - TABS - subject</title>
+        <link rel="stylesheet" href="../../style/index.css"  type="text/css" />
+        <style>
+
+            .link-container {
+                position: absolute;
+                top: 515px;
+                left: 30px;
+            }
+
+            .link {
+                position: relative;
+            }
+
+            .link a {
+                position: absolute;
+                display: block;
+                /*border: 3px dashed #000;*/
+                width: 347px;
+                height: 47px;
+                z-index: 2;
+            }
+
+            .link a:hover + .link-image {
+                background-image: url('assets/computing_science_ks1_page/how_does_a_robot_work_rollover.png');
+            }
+
+            .link-image {
+                position: absolute;
+                display: block;
+                background-image: url('assets/computing_science_ks1_page/how_does_a_robot_work_no_rollover.png');
+                width: 347px;
+                height: 47px;
+                top: 0px;
+                z-index: 1;
+            }
+
+        </style>
+        <!--[if lt IE 9]>
+        <script>
+            document.createElement('header');
+            document.createElement('nav');
+            document.createElement('article');
+            document.createElement('article');
+            document.createElement('aside');
+            document.createElement('footer');
+            document.createElement('figure');
+            document.createElement('figcaption');
+            document.createElement('hgroup');
+        </script>
+        <![endif]-->
+    </head>
+    <body class="content">
+
+        <section class="main-container">
+            <img src="assets/computing_science_ks1_page/computing_science_ks1_page.png"/>
+            <div class="link-container">
+                <div class="link">
+                    <a href="./topic.html"></a>
+                    <span class="link-image"></span>
+                </div>
+            </div>
+        </section>
+
+    </body>
+</html>
