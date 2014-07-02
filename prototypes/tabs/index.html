@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Design prototype sprint 1 - TABS</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .main-container {
+                /*position: relative;*/
+            }
+            .link-container {
+                position: absolute;
+                background-image: url('assets/google/google_page_results_no_rollover.png');
+                width: 491px;
+                height: 81px;
+                top: 170px;
+                left: 133px;
+            }
+            .link-container:hover {
+                background-image: url('assets/google/google_page_results_rollover.png');
+            }
+        </style>
+        <!--[if lt IE 9]>
+        <script>
+            document.createElement('header');
+            document.createElement('nav');
+            document.createElement('article');
+            document.createElement('article');
+            document.createElement('aside');
+            document.createElement('footer');
+            document.createElement('figure');
+            document.createElement('figcaption');
+            document.createElement('hgroup');
+        </script>
+        <![endif]-->
+    </head>
+    <body class="content">
+
+        <section class="main-container">
+            <img src="assets/google/google-results-page.png">
+            <div class="link-container"/>
+        </section>
+
+        <script src="../../src/vendors/jquery.js"></script>
+        <script src="../../src/controller.js"></script>
+
+        <script>
+            var g_controller;
+            window.onload = function() { g_controller = new Controller(); };
+        </script>
+
+    </body>
+</html>
