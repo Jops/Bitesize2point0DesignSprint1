@@ -3,9 +3,20 @@
  *  BODY
  *******************************/
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 /********************************
  *  CONTENT
  *******************************/
+
+.main-container {
+    position: relative;
+    margin: 0px auto;
+    width: 1024px;
+}
 
 /********************************
  *  CANVASES
