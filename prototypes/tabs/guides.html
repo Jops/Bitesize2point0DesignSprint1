@@ -8,8 +8,6 @@
 
             .link-container {
                 position: absolute;
-                top: 515px;
-                left: 30px;
             }
 
             .link {
@@ -20,23 +18,94 @@
                 position: absolute;
                 display: block;
                 /*border: 3px dashed #000;*/
-                width: 347px;
-                height: 47px;
                 z-index: 2;
-            }
-
-            .link a:hover + .link-image {
-                background-image: url('assets/computing_science_ks1_page/how_does_a_robot_work_rollover.png');
             }
 
             .link-image {
                 position: absolute;
                 display: block;
-                background-image: url('assets/computing_science_ks1_page/how_does_a_robot_work_no_rollover.png');
-                width: 347px;
-                height: 47px;
                 top: 0px;
                 z-index: 1;
+            }
+
+            .back {
+                top: 6435px;
+                left: 25px;
+            }
+
+            .back a {
+                width: 564px;
+                height: 307px;
+            }
+
+            .back a:hover + .link-image {
+                background-image: url('assets/bbc_iwonder_computing_guide/BBC_iWonder_Computing_guide_back_to_rollover.png');
+            }
+
+            .back .link-image {
+                background-image: url('assets/bbc_iwonder_computing_guide/BBC_iWonder_Computing_guide_back_to_no_rollover.png');
+                width: 564px;
+                height: 307px;
+            }
+
+            .season {
+                top: 6435px;
+                left: 687px;
+            }
+
+            .season a {
+                width: 316px;
+                height: 430px;
+            }
+
+            .season a:hover + .link-image {
+                background-image: url('assets/bbc_iwonder_computing_guide/BBC_iWonder_Computing_guide_computing_season_link_rollover.png');
+            }
+
+            .season .link-image {
+                background-image: url('assets/bbc_iwonder_computing_guide/BBC_iWonder_Computing_guide_computing_season_link_no_rollover.png');
+                width: 316px;
+                height: 430px;
+            }
+
+            .ks1 {
+                top: 6900px;
+                left: 359px;
+            }
+
+            .ks1 a {
+                width: 644px;
+                height: 309px;
+            }
+
+            .ks1 a:hover + .link-image {
+                background-image: url('assets/bbc_iwonder_computing_guide/BBC_iWonder_Computing_guide_ks1_link_rollover.png');
+            }
+
+            .ks1 .link-image {
+                background-image: url('assets/bbc_iwonder_computing_guide/BBC_iWonder_Computing_guide_ks1_link_no_rollover.png');
+                width: 644px;
+                height: 309px;
+            }
+
+            .bitesize {
+                top: 7231px;
+                left: 22px;
+            }
+
+            .bitesize a {
+                width: 981px;
+                height: 140px;
+            }
+
+            .bitesize a:hover + .link-image {
+                background-image: url('assets/bbc_iwonder_computing_guide/BBC_iWonder_Computing_guide_bitesize_link_rollover.png');
+            }
+
+            .bitesize .link-image {
+                background-image: url('assets/bbc_iwonder_computing_guide/BBC_iWonder_Computing_guide_bitesize_link_no_rollover.png');
+                width: 981px;
+                height: 140px;
             }
 
         </style>
@@ -57,10 +126,28 @@
     <body class="content">
 
         <section class="main-container">
-            <img src="assets/computing_science_ks1_page/computing_science_ks1_page.png"/>
-            <div class="link-container">
+            <img src="assets/bbc_iwonder_computing_guide/BBC_iWonder_Computing_guide.png"/>
+            <div class="link-container back">
                 <div class="link">
                     <a href="./topic.html"></a>
+                    <span class="link-image"></span>
+                </div>
+            </div>
+            <div class="link-container season">
+                <div class="link">
+                    <a href="./subject.html"></a>
+                    <span class="link-image"></span>
+                </div>
+            </div>
+            <div class="link-container ks1">
+                <div class="link">
+                    <a href="./ks1.html"></a>
+                    <span class="link-image"></span>
+                </div>
+            </div>
+            <div class="link-container bitesize">
+                <div class="link">
+                    <a href="./bitesize.html"></a>
                     <span class="link-image"></span>
                 </div>
             </div>
