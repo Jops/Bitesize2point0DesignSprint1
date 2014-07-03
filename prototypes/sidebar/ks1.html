@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>SIDEBAR - ks1 - Design prototype sprint 1</title>
+        <link rel="stylesheet" href="../../style/index.css"  type="text/css" />
+        <style>
+
+            .link-container {
+                position: absolute;
+            }
+
+            .link {
+                position: relative;
+            }
+
+            .link a {
+                position: absolute;
+                display: block;
+                /*border: 3px dashed #000;*/
+                z-index: 2;
+            }
+
+            .link-image {
+                position: absolute;
+                display: block;
+                top: 0px;
+                z-index: 1;
+            }
+
+            .topic {
+                left: 29px;
+                top: 498px;
+            }
+
+            .topic a {
+                width: 294px;
+                height: 48px;
+            }
+
+            .topic a:hover + .link-image {
+                background-image: url('assets/computing_science_ks1_page/computing_science_ks1_page_how_does_a_robot_work_link_rollover.png');
+            }
+
+            .topic .link-image {
+                background-image: url('assets/computing_science_ks1_page/computing_science_ks1_page_how_does_a_robot_work_link_no_rollover.png');
+                width: 294px;
+                height: 48px;
+            }
+
+            .guide {
+                left: 710px;
+                top: 535px;
+            }
+
+            .guide a {
+                width: 282px;
+                height: 60px;
+            }
+
+            .guide a:hover + .link-image {
+                background-image: url('assets/computing_science_ks1_page/computing_science_ks1_page_computing_how_to_rollover.png');
+            }
+
+            .guide .link-image {
+                background-image: url('assets/computing_science_ks1_page/computing_science_ks1_page_computing_how_to_no_rollover.png');
+                width: 282px;
+                height: 60px;
+            }
+
+        </style>
+        <!--[if lt IE 9]>
+        <script>
+            document.createElement('header');
+            document.createElement('nav');
+            document.createElement('article');
+            document.createElement('article');
+            document.createElement('aside');
+            document.createElement('footer');
+            document.createElement('figure');
+            document.createElement('figcaption');
+            document.createElement('hgroup');
+        </script>
+        <![endif]-->
+    </head>
+    <body class="content">
+
+        <section class="main-container">
+            <img src="assets/computing_science_ks1_page/computing_science_ks1_page.png"/>
+            <div class="link-container topic">
+                <div class="link">
+                    <a href="./topic.html"></a>
+                    <span class="link-image"></span>
+                </div>
+            </div>
+            <div class="link-container guide">
+                <div class="link">
+                    <a href="./guides.html"></a>
+                    <span class="link-image"></span>
+                </div>
+            </div>
+        </section>
+
+    </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>SIDEBAR - homepage - Design prototype sprint 1</title>
+        <link rel="stylesheet" href="../../style/index.css"  type="text/css" />
+        <style>
+
+            .link-container {
+                position: absolute;
+            }
+
+            .link {
+                position: relative;
+            }
+
+            .link a {
+                position: absolute;
+                display: block;
+                /*border: 3px dashed #000;*/
+                z-index: 2;
+            }
+
+            .link-image {
+                position: absolute;
+                display: block;
+                top: 0px;
+                z-index: 1;
+            }
+
+            .blog {
+                top: 935px;
+                left: 24px;
+            }
+
+            .blog a {
+                width: 647px;
+                height: 404px;
+            }
+
+            .blog a:hover + .link-image {
+                background-image: url('assets/homepage/bitesize_homepage_help_whats_this_rollover.png');
+            }
+
+            .blog .link-image {
+                background-image: url('assets/homepage/bitesize_homepage_help_whats_this_no_rollover.png');
+                width: 647px;
+                height: 404px;
+            }
+
+            .subject {
+                top: 935px;
+                left: 687px;
+            }
+
+            .subject a {
+                width: 315px;
+                height: 276px;
+            }
+
+            .subject a:hover + .link-image {
+                background-image: url('assets/homepage/bitesize_homepage_computer_science_season_rollover.png');
+            }
+
+            .subject .link-image {
+                background-image: url('assets/homepage/bitesize_homepage_computer_science_season_no_rollover.png');
+                width: 315px;
+                height: 276px;
+            }
+
+        </style>
+        <!--[if lt IE 9]>
+        <script>
+            document.createElement('header');
+            document.createElement('nav');
+            document.createElement('article');
+            document.createElement('article');
+            document.createElement('aside');
+            document.createElement('footer');
+            document.createElement('figure');
+            document.createElement('figcaption');
+            document.createElement('hgroup');
+        </script>
+        <![endif]-->
+    </head>
+    <body class="content">
+
+        <section class="main-container">
+            <img src="assets/homepage/bitesize_homepage_page.png"/>
+            <div class="link-container blog">
+                <div class="link">
+                    <span class="link-image"></span>
+                </div>
+            </div>
+            <div class="link-container subject">
+                <div class="link">
+                    <a href="./subject.html"></a>
+                    <span class="link-image"></span>
+                </div>
+            </div>
+        </section>
+
+    </body>
+</html>
