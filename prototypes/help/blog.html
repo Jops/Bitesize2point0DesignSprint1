@@ -4,6 +4,42 @@
         <meta charset="utf-8" />
         <title>HELP - blog - Design prototype sprint 1</title>
         <link rel="stylesheet" href="../../style/index.css"  type="text/css" />
+        <style>
+
+            .link-container {
+                position: absolute;
+                top: 2051px;
+                left: 40px;
+            }
+
+            .link {
+                position: relative;
+            }
+
+            .link a {
+                position: absolute;
+                display: block;
+                /*border: 3px dashed #000;*/
+                width: 610px;
+                height: 52px;
+                z-index: 2;
+            }
+
+            .link a:hover + .link-image {
+                background-image: url('assets/blog/Blogs_Internet_blog_BBC_iWonder_Introducing_Interactive_Guides_see_a_guide_rollover.png');
+            }
+
+            .link-image {
+                position: absolute;
+                display: block;
+                background-image: url('assets/blog/Blogs_Internet_blog_BBC_iWonder_Introducing_Interactive_Guides_see_a_guide_no_rollover.png');
+                width: 610px;
+                height: 52px;
+                top: 0px;
+                z-index: 1;
+            }
+
+        </style>
         <!--[if lt IE 9]>
         <script>
             document.createElement('header');
@@ -21,9 +57,13 @@
     <body class="content">
 
         <section class="main-container">
-            <a href="./guides.html">
-                <img id="bg" src="assets/blog/Blogs_Internet_blog_BBC_iWonder_Introducing_Interactive_Guides.png"/>
-            </a>
+            <img id="bg" src="assets/blog/Blogs_Internet_blog_BBC_iWonder_Introducing_Interactive_Guides.png"/>
+            <div class="link-container">
+                <div class="link">
+                    <a href="./guides.html"></a>
+                    <span class="link-image"></span>
+                </div>
+            </div>
         </section>
 
     </body>
